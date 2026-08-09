@@ -9,13 +9,19 @@
     "opencode-go/deepseek-v4-flash:high"
   ],
   "packages": [
-    "npm:@juanibiapina/pi-extension-settings",
-    "npm:@juanibiapina/pi-powerbar",
     "npm:@houndmcp/hound-mcp-pi",
     "npm:@ogulcancelik/pi-herdr",
     "npm:pi-subagents-lite",
-    "npm:@narumitw/pi-btw"
+    "npm:@narumitw/pi-btw",
+    "npm:@99percentpeople/pi-codex-api"
   ],
   "tuiMode": "fullscreen",
-  "fullscreenScrollbar": "auto"
+  "fullscreenScrollbar": "auto",
+  "outputPad": 1,
+  "compaction": {
+    "enabled": true
+  },
+  "retry": {
+    "enabled": true
+  }
 }

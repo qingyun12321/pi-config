@@ -5,3 +5,8 @@
 - Prefer established, well-maintained libraries when they reduce overall complexity or improve reliability. Do not reimplement common functionality without a clear reason.
 - Lean on the dependencies already in the project before writing your own implementation or adding packages. Do not assume a library lacks a capability without checking its documentation and types.
 - Make architectural decisions for the long term. Do not accept a stopgap that only works for now and is meant to be replaced later.
+
+---
+
+- Prefer `uv` for Python dependency management, environments, and command execution. Use `uv add` and `uv remove` to manage project dependencies instead of `pip install`, `pip uninstall`, or their `uv pip` equivalents, and use `uv run` to execute Python commands. When a shared Python environment is needed, use `~/.agent/.venv` instead of the system Python environment.
+- Use `mise` as the default tool and runtime manager, and pin mise-managed tools to `latest`. Whenever supported, install and manage npm- and Bun-related tools and packages through `mise` as well.
