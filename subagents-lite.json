@@ -16,6 +16,6 @@
     "outputTranscript": false
   },
   "concurrency": {
-    "default": 2
+    "default": 6
   }
 }

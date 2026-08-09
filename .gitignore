@@ -2,6 +2,8 @@
 !.gitignore
 !AGENTS.md
 !keybindings.json
+!pi-btw.json
 !settings.json
+!subagents-lite.json
 !extensions/
 !extensions/**
