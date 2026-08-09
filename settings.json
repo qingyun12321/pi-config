@@ -13,8 +13,8 @@
     "npm:@juanibiapina/pi-powerbar",
     "npm:@houndmcp/hound-mcp-pi",
     "npm:@ogulcancelik/pi-herdr",
-    "npm:pi-herdr-btw",
-    "npm:pi-subagents-lite"
+    "npm:pi-subagents-lite",
+    "npm:@narumitw/pi-btw"
   ],
   "tuiMode": "fullscreen",
   "fullscreenScrollbar": "auto"
