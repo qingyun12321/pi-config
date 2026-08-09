@@ -9,10 +9,12 @@
     "opencode-go/deepseek-v4-flash:high"
   ],
   "packages": [
+    "npm:@juanibiapina/pi-extension-settings",
+    "npm:@juanibiapina/pi-powerbar",
     "npm:@houndmcp/hound-mcp-pi",
-    "npm:pi-subagents",
     "npm:@ogulcancelik/pi-herdr",
-    "npm:pi-herdr-btw"
+    "npm:pi-herdr-btw",
+    "npm:pi-subagents-lite"
   ],
   "tuiMode": "fullscreen",
   "fullscreenScrollbar": "auto"

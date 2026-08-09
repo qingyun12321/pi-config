@@ -1,0 +1,21 @@
+{
+  "agent": {
+    "default": "opencode-go/deepseek-v4-flash",
+    "forceBackground": false,
+    "systemPromptMode": "replace",
+    "includeContextFiles": true,
+    "loadSkillsImplicitly": false,
+    "loadExtensionsImplicitly": false,
+    "showCost": true,
+    "showTools": true,
+    "showTurns": true,
+    "showInput": true,
+    "showOutput": true,
+    "showContext": true,
+    "showTime": true,
+    "outputTranscript": false
+  },
+  "concurrency": {
+    "default": 2
+  }
+}
