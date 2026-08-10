@@ -1,3 +1,5 @@
 {
-  "app.clipboard.pasteImage": ["ctrl+v", "alt+v"]
+  "app.clipboard.pasteImage": ["ctrl+v", "alt+v"],
+  "tui.altScreen.previousPrompt": "alt+pageUp",
+  "tui.altScreen.nextPrompt": "alt+pageDown"
 }

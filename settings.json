@@ -9,11 +9,17 @@
     "opencode-go/deepseek-v4-flash:high"
   ],
   "packages": [
+    {
+      "source": "npm:@ff-labs/pi-fff",
+      "extensions": []
+    },
+    "npm:@mobrienv/pi-tidy-tools",
     "npm:@houndmcp/hound-mcp-pi",
     "npm:@ogulcancelik/pi-herdr",
-    "npm:pi-subagents-lite",
     "npm:@narumitw/pi-btw",
-    "npm:@99percentpeople/pi-codex-api"
+    "npm:@99percentpeople/pi-codex-api",
+    "npm:@ogulcancelik/pi-codex-compaction",
+    "git:github.com/edxeth/pi-subagents"
   ],
   "tuiMode": "fullscreen",
   "fullscreenScrollbar": "auto",

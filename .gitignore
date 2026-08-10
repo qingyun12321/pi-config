@@ -4,6 +4,7 @@
 !keybindings.json
 !pi-btw.json
 !settings.json
-!subagents-lite.json
+!agents/
+!agents/**
 !extensions/
 !extensions/**
