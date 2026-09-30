@@ -2,7 +2,7 @@
 !.gitignore
 !AGENTS.md
 !keybindings.json
-!pi-btw.json
+!mcp.json
 !settings.json
 !agents/
 !agents/**

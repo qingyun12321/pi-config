@@ -1,22 +1,22 @@
 {
-  "lastChangelogVersion": "0.85.1",
+  "lastChangelogVersion": "0.99.1",
+  "quietStartup": true,
   "theme": "dark",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-6-astra",
   "enabledModels": [
     "openai-codex/gpt-6-astra:medium",
-    "opencode-go/deepseek-v4.1-flash:high"
+    "opencode-go/deepseek-v4.1-flash:high",
+    "openai-codex/gpt-6-luna:low"
   ],
   "packages": [
-    "npm:@houndmcp/hound-mcp-pi",
     "npm:@99percentpeople/pi-codex-api",
     "npm:@ogulcancelik/pi-codex-compaction",
     "npm:@senad-d/drawme",
-    "npm:@pi-unipi/btw",
     "npm:@plannotator/pi-extension",
-    "npm:@mobrienv/pi-tidy-tools",
-    "npm:@mobrienv/pi-tidy-subagents",
-    "git:github.com/kkunkunya/pi-chrome"
+    "git:github.com/kkunkunya/pi-chrome",
+    "npm:pi-cc-extensions",
+    "npm:pi-btw"
   ],
   "tuiMode": "fullscreen",
   "fullscreenScrollbar": "auto",

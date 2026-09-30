@@ -18,5 +18,6 @@ Preserve useful human-written comments unless the code change makes them inaccur
 
 ---
 
-- Prefer `uv` for Python dependency management, environments, and command execution. Use `uv add` and `uv remove` to manage project dependencies instead of `pip install`, `pip uninstall`, or their `uv pip` equivalents, and use `uv run` to execute Python commands. When a shared Python environment is needed, use `~/.agent/.venv` instead of the system Python environment.
+- Prefer `uv` for Python dependency management, environments, and command execution. Use `uv add` and `uv remove` to manage project dependencies instead of `pip install`, `pip uninstall`, or their `uv pip` equivalents, and use `uv run` to execute Python commands. When a shared Python environment is needed, use `~/.agents/.venv` instead of the system Python environment.
 - Use `mise` as the default tool and runtime manager, and pin mise-managed tools to `latest`. Whenever supported, install and manage npm- and Bun-related tools and packages through `mise` as well.
+- When adding or modifying environment variables, prefer defining them in `~/.config/env.sh` as shared environment variables. Use home-relative paths rather than hardcoded absolute paths.
