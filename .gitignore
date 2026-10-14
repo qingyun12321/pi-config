@@ -2,9 +2,6 @@
 !.gitignore
 !AGENTS.md
 !keybindings.json
-!mcp.json
 !settings.json
-!agents/
-!agents/**
 !extensions/
 !extensions/**

@@ -1,20 +1,16 @@
-- Do not preserve backward compatibility. Remove obsolete paths instead of adding compatibility layers, fallbacks, or migrations.
-- Choose the simplest implementation that fully meets the current requirements. Avoid speculative abstractions, configuration, and indirection.
-- Grow the system in layers. Start from the smallest version that works end to end, and add each new capability on top of a product that already works. Never trade a working product for unfinished complexity.
-- Keep components modular and concerns clearly separated.
-- Prefer established, well-maintained libraries when they reduce overall complexity or improve reliability. Do not reimplement common functionality without a clear reason.
-- Lean on the dependencies already in the project before writing your own implementation or adding packages. Do not assume a library lacks a capability without checking its documentation and types.
-- Make architectural decisions for the long term. Do not accept a stopgap that only works for now and is meant to be replaced later.
-
----
-
-Write every mdtest paragraph, code comment, piece of documentation, PR description, and GitHub issue for its eventual reader, not for the current Codex conversation. Determine the reader's knowledge, purpose, and likely questions privately; do not add an audience-analysis section to the artifact.
-
-Base public-facing text on the final code, complete final diff, relevant issue, and verified evidence. Explain the observable behavior or problem before implementation details. Use established technical terminology and the actual names of types, functions, files, and invariants.
-
-Do not mention discarded alternatives, intermediate edits, private instructions, tool usage, branch or draft status, local test commands, or session history unless the reader needs that information to understand the final result. Do not describe reverted changes as part of the final change.
-
-Preserve useful human-written comments unless the code change makes them inaccurate. Before finishing, reread each changed artifact as someone with no access to the Codex session and remove or explain anything that would surprise or confuse that reader.
+- Apply ASD-STE100 writing principles and vocabulary guidance to explanations and writing in all languages. Use short sentences, one idea per sentence, active voice, and consistent terminology. Prefer ASD-STE100 approved words and their approved meanings wherever practical. In other languages, use natural equivalents of those words with the same meanings, and adapt the writing principles to the language's grammar. Keep precise technical terms when needed. Prioritize clarity and technical accuracy over formal compliance with the standard.
+- Prefer diagrams over long prose for answers and explanations when they make relationships, processes, or structures easier to understand. Choose a format that displays correctly in the current interface. In a terminal UI (TUI), prefer compact plain-text diagrams, such as ASCII flows or trees, that are at most 80 columns wide. Do not present unrendered Mermaid or other diagram source as a visual explanation unless the user explicitly requests the source. Keep labels clear and add only the text needed to explain what the diagram cannot convey. For plain-text diagrams:
+  - Put the diagram in a fenced code block, so that the renderer keeps the spaces and uses a monospace font.
+  - Use only characters whose width is the same in common terminals and fonts. CJK characters and fullwidth punctuation such as `（）：，` take 2 columns. ASCII letters, digits, and spaces, box-drawing characters such as `│ ─ ┌ ├ ┤ └`, and the arrows `← → ↑ ↓ ▲ ▼` take 1 column in terminals that show East Asian ambiguous-width characters as narrow, which is the common default.
+  - Do not use other symbols. Emoji, circled numbers such as `①`, and symbols such as `※ • …` have a width that changes with the renderer and font, and some fonts draw them too small to read. Write numbers as `1.` or `(1)`.
+  - Do not put tab characters in diagrams, because their display width depends on the renderer. Use spaces, and write `<Tab>` when the diagram must show a tab.
+  - You read and write tokens, not display columns, and you cannot see the rendered result. Your mental count of columns is not reliable, especially with CJK text. Thus, use as few alignment points as possible. An alignment point is a character whose column must match a character on another line, such as a vertical line, a right border, or a column of annotations.
+  - Prefer layouts that have no alignment point after text of variable width: trees, vertical flows, open nodes such as `[label]`, and annotations at the end of the line. Put CJK text only where nothing to its right must align.
+  - If a border or a column must come after a label, write that label in ASCII. Put the CJK text outside the box or at the end of the line.
+  - If a border or a column must come after CJK text, generate the lines with a script. The script must calculate the padding. Do not write the lines by hand and then only check them. Calculate the display width with Python's `unicodedata.east_asian_width` (`W` and `F` count as 2 columns). Do not use `len()` or the number of characters. Keep the script in a temporary location, and show only the final diagram.
+  - Do not say that a diagram is aligned unless a script measured it.
+- Do not create backup files when modifying files unless explicitly requested.
+- Prefer first-principles thinking to solve problems. Identify the goal and the basic facts and constraints that are known to be true. Then build the solution from them. Do not copy a common practice or an analogy without a check that its assumptions apply to the current problem.
 
 ---
 
