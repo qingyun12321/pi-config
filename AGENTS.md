@@ -1,3 +1,7 @@
+# General rules
+
+These rules apply on all operating systems.
+
 - Apply ASD-STE100 writing principles and vocabulary guidance to explanations and writing in all languages. Use short sentences, one idea per sentence, active voice, and consistent terminology. Prefer ASD-STE100 approved words and their approved meanings wherever practical. In other languages, use natural equivalents of those words with the same meanings, and adapt the writing principles to the language's grammar. Keep precise technical terms when needed. Prioritize clarity and technical accuracy over formal compliance with the standard.
 - Prefer diagrams over long prose for answers and explanations when they make relationships, processes, or structures easier to understand. Choose a format that displays correctly in the current interface. In a terminal UI (TUI), prefer compact plain-text diagrams, such as ASCII flows or trees, that are at most 80 columns wide. Do not present unrendered Mermaid or other diagram source as a visual explanation unless the user explicitly requests the source. Keep labels clear and add only the text needed to explain what the diagram cannot convey. For plain-text diagrams:
   - Put the diagram in a fenced code block, so that the renderer keeps the spaces and uses a monospace font.
@@ -14,6 +18,11 @@
 
 ---
 
+# Linux and WSL rules
+
+These rules apply only on Linux or in WSL.
+
+- Find out whether you work in WSL, for example from the `WSL_DISTRO_NAME` environment variable or from `/proc/version`. In WSL, convert each path that crosses between Windows and Linux before you use it, for example with `wslpath -w` or `wslpath -u`. Windows tools need Windows paths such as `C:\Users\...`, and Linux tools need Linux paths such as `/mnt/c/Users/...`.
 - Prefer `uv` for Python dependency management, environments, and command execution. Use `uv add` and `uv remove` to manage project dependencies instead of `pip install`, `pip uninstall`, or their `uv pip` equivalents, and use `uv run` to execute Python commands. When a shared Python environment is needed, use `~/.agents/.venv` instead of the system Python environment.
 - Use `mise` as the default tool and runtime manager, and pin mise-managed tools to `latest`. Whenever supported, install and manage npm- and Bun-related tools and packages through `mise` as well.
 - When adding or modifying environment variables, prefer defining them in `~/.config/env.sh` as shared environment variables. Use home-relative paths rather than hardcoded absolute paths.
